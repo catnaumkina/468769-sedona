@@ -1,0 +1,58 @@
+.page-header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: @base-width;
+}
+.main-nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.main-nav__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.main-nav__site-list__item a {
+  .header-text();
+  display: inline-block;
+  width:320px;
+  height: 40px;
+  background-color: @lightblue;
+  color: white;
+  text-decoration: none;
+  padding-top: 15px;
+  border-bottom: 1px solid white;
+}
+.main-nav__toggle {
+  position: relative;
+  top: -60px;
+  left: 200px;
+}
+.page-header__general-image {
+  width: 319px;
+  height: 465px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:  left 0px bottom 16px, center top 150px, center top 60px;
+  background-size: auto, 250px, auto;
+  position: relative;
+}
+.page-header__general-image--internal {
+  width: 319px;
+  height: 180px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:  left bottom 21px, center top 50px, top -230px center;
+  background-size: auto, 220px, auto;
+  position: relative;
+}
+.page-header__logo {
+  margin: 0 auto;
+  padding: 0;
+}
+.page-header__logo-image {
+  width: 100px;
+}
