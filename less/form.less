@@ -7,10 +7,16 @@ textarea {
   background-color: #eeeeee;
   vertical-align: middle;
 }
+.feedback {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 .feedback__fieldset {
+  box-sizing: border-box;
   border: 0;
   border-top: 1px solid #c1c1c1;
-  padding: 20px 20px;
+  padding: 20px 0;
   .main-text ();
 }
 
@@ -33,7 +39,7 @@ textarea {
   margin: 0;
 }
 .feedback__input--tel {
-  width: 100%;
+  width: 280px;
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: 97% 50%;
@@ -41,7 +47,7 @@ textarea {
   margin: 0;
 }
 .feedback__input--email {
-  width: 80%;
+  width: 280px;
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
   background-position: 97% 50%;
@@ -70,4 +76,80 @@ textarea {
 }
 .feedback-button {
   .page-main__hotel();
+  width: 324px;
+}
+@media (min-width: @tablet-width) {
+  .feedback {width: 648px;
+    display: flex;
+    flex-wrap: wrap;
+    }
+  .feedback__fieldset {
+    width: 314px;
+    padding-left: 0;
+    border: 0;
+  }
+  .feedback__fieldset--3{
+    order: -1;
+   }
+  .feedback__fieldset--1 {
+    order: 1;
+  }
+  .feedback__fieldset--2 {
+    order: 2;
+    flex-grow: 2;
+    width: 648px;
+  }
+  .feedback__fieldset--4 {
+    order: 4;
+    flex-grow: 2;
+    width: 648px;
+  }
+  .feedback__fieldset--5 {
+    order: 5;
+    flex-grow: 2;
+    width: 648px;
+  }
+  .feddback__legend {
+    text-align: left;
+  }
+  .feedback__textarea {
+   width: 648px;
+  }
+  .feedback__input--tel {
+    width: 648px;
+  }
+  .feedback__input--email {
+    width: 648px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .feedback {
+    width: 960px;
+  }
+  .feedback__fieldset {
+    width: 470px;
+    padding-left: 0;
+    border: 0;
+  }
+  .feedback__fieldset--2 {
+    flex-grow: 2;
+    width: 960px;
+  }
+  .feedback__fieldset--4 {
+    flex-grow: 2;
+    width: 960px;
+  }
+  .feedback__fieldset--5 {
+    flex-grow: 2;
+    width: 960px;
+  }
+  .feedback__textarea {
+    width: 960px;
+  }
+  .feedback__input--tel {
+    width: 648px;
+  }
+  .feedback__input--email {
+    width: 648px;
+  }
 }

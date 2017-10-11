@@ -1,5 +1,8 @@
 @base-width: 320px;
 @lightblue: #81b3d2;
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
 @import "main-nav.less";
 @import "page-main.less";
 @import "page-footer.less";
@@ -18,7 +21,7 @@
        url('../fonts/ptsansbold.woff') format('woff');
 }
 body {
-  width: @base-width;
+  min-width: @base-width;
   background-color: white;
   margin: 0;
 }
@@ -38,8 +41,18 @@ body {
     color: black;
   }
   .button {
-    display: block;
-    width: 280px;
     margin: 0 auto;
     background-color: @lightblue;
   }
+  .visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
