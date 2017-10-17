@@ -14,35 +14,27 @@
 .social__list {
   margin: 40px 50px;
   list-style: none;
-  display: block;
+  display: flex;
 }
 .social__item {
-  float: left;
-}
-.social__link {
-  display: inline-block;
   width: 45px;
   margin-right: 5px;
   height: 45px;
-  vertical-align: middle;
   background-color: @lightblue;
   font-size: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.social__link--twitter {
-  background-image: url("../img/icon-twitter.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.social__link {
+  display: block;
+  fill: white;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
 }
-.social__link--facebook {
-  background-image: url("../img/icon-facebook.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.social__link--youtube {
-  background-image: url("../img/icon-youtube.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .page-footer__copyright {
 }
 .copyright__text {
@@ -53,9 +45,6 @@
   width: 40px;
   height: 40px;
   vertical-align: middle;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   font-size: 0px;
 }
 @media (min-width: @tablet-width) {
@@ -64,7 +53,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
   }
 }
 @media (min-width: @desktop-width) {
