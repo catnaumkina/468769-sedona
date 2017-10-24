@@ -25,6 +25,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    background-color: @lightblue__hover;
+  }
+  &:active {
+    background-color: @lightblue__active;
+  }
+  &:disabled {
+    background-color: @lightblue__dis;
+  }
 }
 .social__link {
   display: block;
@@ -46,6 +55,13 @@
   height: 40px;
   vertical-align: middle;
   font-size: 0px;
+  fill: black;
+  &:hover {
+    fill: @lightblue;
+  }
+  &:active {
+    fill: @lightgrey;
+  }
 }
 @media (min-width: @tablet-width) {
   .page-footer {

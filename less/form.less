@@ -4,7 +4,7 @@ output,
 textarea {
   border: 0;
   margin: 0;
-  background-color: #eeeeee;
+  background-color: @radio;
   vertical-align: middle;
 }
 
@@ -25,12 +25,27 @@ textarea {
   display: block;
 }
 .feedback__input {
+  box-sizing: border-box;
+  background-color: #f2f2f2;
   .header-text ();
   text-transform: none;
-  width: 140px;
+  width: 165px;
   padding: 15px 15px;
   margin-bottom: 15px;
   margin-right: 0;
+  border: 2px solid white;
+  &:hover {
+    background-color: @lightgrey;
+  }
+  &:active {
+    background-color: white;
+    border: 2px solid @lightgrey;
+  }
+  &:focus {
+    background-color: white;
+    border: 2px solid @lightgrey;
+  }
+
 }
 .feddback__legend {
   .header-text();
@@ -85,12 +100,24 @@ textarea {
   width: 240px;
   padding: 20px;
   margin-bottom: 30px;
+  border: 2px solid white;
+  &:hover {
+    background-color: @lightgrey;
+  }
+  &:active {
+    background-color: white;
+    border: 2px solid @lightgrey;
+  }
+  &:focus {
+    background-color: white;
+    border: 2px solid @lightgrey;
+  }
 }
 .feedback-button {
   .page-main__hotel();
   width: 280px;
   height: 60px;
-  order: 8;
+
 }
 
 input[type="radio"] {
@@ -105,20 +132,26 @@ input[type="radio"] + label::before {
     display: inline-block;
     height: 50px;
     width: 50px;
-    background-color: #e1e1e1;
+    background-color: @radio;
     border-radius: 50%;
     vertical-align: middle;
     margin-right: 30px;
-
 }
 input[type="radio"]:checked + label::before {
   height: 50px;
   width: 50px;
   background-color: black;
-  border: 15px solid #e1e1e1;
+  border: 15px solid @radio__hover;
   border-radius: 50%;
   box-sizing: border-box;
-
+}
+input[type="radio"]:active + label::before {
+  height: 50px;
+  width: 50px;
+  background-color: @darkgrey;
+  border: 15px solid @radio__hover;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
 input[type="checkbox"] {
     display: none;
@@ -133,7 +166,7 @@ input[type="checkbox"] + label::before {
     display: inline-block;
     height: 60px;
     width: 60px;
-    background-color: #e1e1e1;
+    background-color: @radio;
     border-radius: 10%;
     vertical-align: middle;
     margin-right: 30px;
@@ -141,7 +174,13 @@ input[type="checkbox"] + label::before {
 input[type="checkbox"]:checked + label::before {
     background: url("../img/icon-tick.svg") no-repeat;
     background-position: center;
-    background-color: #e1e1e1;
+    background-color: @radio__active;
+    border-radius: 10%;
+}
+input[type="checkbox"]:active + label::before {
+    background: url("../img/icon-tick.svg") no-repeat;
+    background-position: center;
+    background-color: @radio__hover;
     border-radius: 10%;
 }
 
@@ -151,6 +190,9 @@ input[type="checkbox"]:checked + label::before {
   height: 90px;
   .header-text;
   text-transform: none;
+}
+.feedback-comment {
+  display: none;
 }
 @media (min-width: @tablet-width) {
 
@@ -211,11 +253,32 @@ input[type="checkbox"]:checked + label::before {
   .feddback__legend--cont, .feddback__legend--dost, .feddback__legend--emo{
     text-align: center;
   }
+  .feedback-flex--3 {
+    display: flex;
+    width: 100%;
+    order: 8;
+    align-items: center;
+  }
+  .feedback-comment {
+    display: block;
+    flex-grow: 2;
+    width: 324px;
+    margin-left: auto;
+    .copyright__text();
+    text-align: right;
+  }
+  .feedback-button {
+    width: 324px;
+  }
 
 }
 @media (min-width: @desktop-width) {
   .feedback {
     width: 960px;
+  }
+  .feedback__form {
+    width: 960px;
+    margin: 0 auto;
   }
   .feedback__fieldset {
     width: 470px;
@@ -235,10 +298,10 @@ input[type="checkbox"]:checked + label::before {
     width: 960px;
   }
   .feedback__textarea {
-    width: 960px;
+    width: 920px;
   }
   .feedback__input {
-    width: 315px;
+    width: 335px;
   }
   .feedback__input--tel {
     width: 315px;
@@ -249,12 +312,14 @@ input[type="checkbox"]:checked + label::before {
   .feedback__fieldset--flex {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
   }
   .feddback__legend--cont, .feddback__legend--dost  {
     padding-top: 40px;
     padding-bottom: 50px;
   }
   .feedback-flex--2 {
+    width: 480px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -263,10 +328,13 @@ input[type="checkbox"]:checked + label::before {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 980px;
+    width: 960px;
   }
   .feedback-button {
     width: 460px;
+  }
+  .feedback__label--2 {
+    padding-left: 10px;
   }
 
 }

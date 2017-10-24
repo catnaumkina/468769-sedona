@@ -1,5 +1,14 @@
 @base-width: 320px;
 @lightblue: #81b3d2;
+@lightblue__hover: #669ec0;
+@lightblue__active: #5496bd;
+@lightblue__dis: #e5e5e5;
+@lightgrey: #dbd8d5;
+@middlegrey: #766357;
+@darkgrey: #604e43;
+@radio: #f2f2f2;
+@radio__hover: #e5e5e5;
+@radio__active:#d5d5d5;
 @tablet-width: 768px;
 @desktop-width: 1200px;
 @mobile-width-only: 767px;
@@ -45,6 +54,15 @@ body {
   .button {
     margin: 0 auto;
     background-color: @lightblue;
+    &:hover {
+      background-color: @lightblue__hover;
+    }
+    &:active {
+      background-color: @lightblue__active;
+    }
+    &:disabled {
+      background-color: @lightblue__dis;
+    }
   }
   .visually-hidden:not(:focus):not(:active) {
   position: absolute;

@@ -8,7 +8,6 @@
   width: 320px;
   min-height: 50px;
   margin: 0 auto;
-  background-color: @lightblue;
 }
 .main-nav__list {
   margin: 0;
@@ -28,6 +27,13 @@
   border-top: 1px solid #9dd1f2;
   border-bottom: 1px solid grey;
   margin: 0 auto;
+  background-color: @lightblue;
+  &:hover {
+    background-color: @lightblue__hover;
+  }
+  &:active {
+    background-color: @lightblue__active;
+  }
 }
 .site-list a[href] {
   &:hover {
@@ -158,8 +164,26 @@
 
   }
   .site-list a {
+    background-color: white;
     color: black;
     border: 0;
+    &:hover {
+      color: @lightblue;
+    }
+    &:active {
+      color:@lightgrey;
+    }
+  }
+  .site-list__item--active a {
+    color: @middlegrey;
+    border: 0;
+    &:hover {
+      color: @darkgrey;
+    }
+    &:active {
+      color:@lightgrey;
+    }
+
   }
 
   .main-nav__toggle  {
